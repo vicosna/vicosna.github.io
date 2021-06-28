@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>域名已更換</title>
+    <style>
+        #wrap {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 90vh;
+            justify-content: center;
+            font-size: 22px;
+            font-family: Lato, Helvetica Neue For Number, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, PingFang SC, Hiragino Sans GB, "Microsoft JhengHei", "MicrMicrosoft YaHei", Helvetica Neue, Helvetica, Arial, sans-serif;
+            line-height: 2;
+            margin: 0 5px;
+            text-align: center;
+
+        }
+
+        .old {
+            font-weight: bold;
+            color: #0040ff;
+            font-size: 25px;
+            font-style: italic;
+        }
+
+        .new {
+            font-weight: bold;
+            color: #0040ff;
+            font-size: 25px;
+            font-style: italic;
+        }
+
+        #jump {
+            font-weight: bold;
+            color: red;
+        }
+
+        img {
+            width: 150px;
+            height: 150px;
+        }
+    </style>
+    <style type="text/css">
+        @font-face {
+            font-family: "element-icons";
+            src: url('chrome-extension://moombeodfomdpjnpocobemoiaemednkg/fonts/element-icons.woff') format('woff'),
+                url('chrome-extension://moombeodfomdpjnpocobemoiaemednkg/fonts/element-icons.ttf ') format('truetype');
+            /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+        }
+    </style>
+    <style class="mpa-style-fix ImageGatherer">
+        .FotorFrame {
+            position: fixed !important
+        }
+    </style>
+    <style class="mpa-style-fix SideFunctionPanel">
+        .weui-desktop-online-faq__wrp {
+            top: 304px !important;
+            bottom: unset !important
+        }
+
+        .weui-desktop-online-faq__wrp .weui-desktop-online-faq__switch {
+            width: 38px !important
+        }
+    </style>
+</head>
+
+<body mpa-version="7.16.11" mpa-extension-id="ibefaeehajgcpooopoegkifhgecigeeg">
+    <div id="wrap">
+        <img src="https://cdn.jsdelivr.net/gh/vicosna/PicBed@master/image/logo/logo.jpg" alt="logo" width="128px"
+            style="border-radius: 50%">
+        <div>域名已经由 <span class="old">vicosna.github.io</span> 更改为 <span class="new">vicosna.com</span></div>
+        <div>將在 <span id="jump">2</span> 秒后跳转到 <span class="new">vicosna.com</span></div>
+    </div>
+    <script>
+        let time = 5
+        const dom = document.getElementById('jump')
+
+        function add() {
+            time--
+            if (time <= 0) {
+                window.clearInterval(count)
+
+                window.location.href = 'https://www.vicosna.com'
+                // + location.pathname
+            }
+            dom.innerText = time
+        }
+
+        dom.innerText = time
+        const count = window.setInterval(add, 1000)
+    </script>
+
+    <div class="mpa-sc mpa-plugin-article-gatherer mpa-new mpa-rootsc" data-z="100" style="display: block;"
+        id="mpa-rootsc-article-gatherer"></div>
+    <div class="mpa-sc mpa-plugin-image-gatherer mpa-new mpa-rootsc" data-z="100" style="display: block;"
+        id="mpa-rootsc-image-gatherer"></div>
+    <div class="mpa-sc mpa-plugin-page-clipper mpa-new mpa-rootsc" data-z="100" style="display: block;"
+        id="mpa-rootsc-page-clipper"></div>
+    <div class="mpa-sc mpa-plugin-text-gatherer mpa-new mpa-rootsc" data-z="100" style="display: block;"
+        id="mpa-rootsc-text-gatherer"></div>
+    <div class="mpa-sc mpa-plugin-video-gatherer mpa-new mpa-rootsc" data-z="100" style="display: block;"
+        id="mpa-rootsc-video-gatherer"></div>
+    <div class="mpa-sc mpa-plugin-side-function-panel mpa-new mpa-rootsc" data-z="110" style="display: block;"
+        id="mpa-rootsc-side-function-panel"></div>
+    <div class="mpa-sc mpa-plugin-notifier mpa-new mpa-rootsc" data-z="120" style="display: block;"
+        id="mpa-rootsc-notifier"></div>
+    <div class="mpa-sc mpa-plugin-notification-manager mpa-new mpa-rootsc" data-z="130" style="display: block;"
+        id="mpa-rootsc-notification-manager"></div>
+</body>
+<div style="all: initial;">
+    <div id="__hcfy__" style="all: initial;"></div>
+</div>
+
+</html>
